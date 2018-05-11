@@ -1,0 +1,62 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the web app that you wish to create."
+            }
+        },
+        "appServicePlanName": {
+            "type": "string",
+            "defaultValue": "[concat(parameters('appName'), 'Hosting')]",
+            "metadata": {
+                "description": "The name of the App Service plan to use for hosting the web app."
+            }
+        },
+        "appInsightsName": {
+            "type": "string",
+            "defaultValue": "[concat(parameters('appName'), 'Insights')]",
+            "metadata": {
+                "description": "App insights container name."
+            }
+        },
+        "appInsightsLocation": {
+            "type": "string",
+            "defaultValue": "South Central US",
+            "metadata": {
+                "description": "Region where app insights services reside. Not available in every region."
+            }
+        },
+        "appRepoUrl": {
+            "type": "string",
+            "defaultValue": "https://github.com/thnk2wn/AzureWebHelloWorld.git",
+            "metadata": {
+                "description": "Remote Git repo url"
+            }
+        },
+        "appRepoBranch": {
+            "type": "string",
+            "defaultValue": "master",
+            "metadata": {
+                "description": "Remote Git repo branch"
+            }
+        },
+        "environment": {
+            "type": "string",
+            "metadata": {
+                "description": "Environment name"
+            }
+        }
+    },
+    "variables": {
+         
+    },
+    "resources": [
+         
+    ],
+    "outputs": {
+         
+    }
+}
